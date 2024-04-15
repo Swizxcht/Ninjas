@@ -25,7 +25,7 @@ public class babi {
                 System.out.print("\t\t\t\t\tEnter your choice: ");
                 choice = Integer.parseInt(input.readLine());
             } catch(Exception A) {
-                System.out.println("\t\t\t\t\tTanga mali! Ulitin mo!");
+                System.out.println("\t\t\t\t\tAyusi mali mali amp! Ulitin mo!");
             }
 
             switch (choice) {
@@ -71,7 +71,7 @@ public class babi {
                                     System.out.println("\t\t\t\t\tInvalid input pare.");
                             }
                         } catch(Exception A) {
-                            System.out.println("\t\t\t\t\tTanga mali! Ulitin mo!");
+                            System.out.println("\t\t\t\t\tAyusi mali mali amp! Ulitin mo!");
                         }
                         System.out.print("\t\t\t\t\tDo you want to buy another juice? [ Y / N ]: ");
                         YesOrNo = input.readLine();
@@ -103,7 +103,7 @@ public class babi {
                                     System.out.println("\t\t\t\t\tInvalid input pare.");
                             }
                         } catch(Exception A) {
-                            System.out.println("\t\t\t\t\tTanga mali! Ulitin mo!");
+                            System.out.println("\t\t\t\t\tAyusi mali mali amp! Ulitin mo!");
                         }
                         System.out.print("\t\t\t\t\tDo you want to buy another vape? [ Y / N ]: ");
                         YesOrNo = input.readLine();
@@ -118,22 +118,24 @@ public class babi {
                         if(pera < item){
                             System.out.println("\t\t\t\t\tHanep na yan kulang pera mo tol!");
                         } else if(pera == item){
+                            item = pera - item;
                             System.out.println("\t\t\t\t\tAngas mo pre sakto pera mo");
                         } else if(pera == 0){
-                            System.out.println("\t\t\t\t\tTanga wala kang pera");
+                            System.out.println("\t\t\t\t\tBonak wala kang pera");
                         } else {
                             change = pera - item;
+                            item = pera - item - change; // or just set the item = 0
                             System.out.println("\t\t\t\t\tMay sukli ka pa brad na P" + change);
                         }
                     } catch(Exception A){
-                        System.out.println("\t\t\t\t\tTanga mali! Ulitin mo!");
+                        System.out.println("\t\t\t\t\tBonak mali! Ulitin mo!");
                     }
                     break;
                 case 4:
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("\t\t\t\t\tTanga mo naman kita mong 1-4 lang pipili ka ng wala sa pamilian. BOBO!\n");
+                    System.out.println("\t\t\t\t\tBonak mo naman kita mong 1-4 lang pipili ka ng wala sa pamilian. BOBO!\n");
                     //System.exit(0);
                     break;
             }
